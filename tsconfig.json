@@ -16,7 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@theme/*": ["./src/theme/*"],
       "@ui/*": ["./src/components/*"]
     },
     "types": ["node"]

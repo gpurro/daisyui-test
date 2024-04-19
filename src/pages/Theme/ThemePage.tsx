@@ -1,5 +1,5 @@
-import * as components from '@theme/index';
-import ComponentContainer from '@ui/utils/ComponentContainer';
+import * as components from './components/index';
+import ComponentContainer from './ComponentContainer';
 import type React from 'react';
 import { type ReactElement } from 'react';
 
