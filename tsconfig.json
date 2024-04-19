@@ -18,7 +18,8 @@
     "paths": {
       "@theme/*": ["./src/theme/*"],
       "@ui/*": ["./src/components/*"]
-    }
+    },
+    "types": ["node"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
