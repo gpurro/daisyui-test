@@ -1,6 +1,6 @@
-import { QueryClientProvider } from 'react-query';
-import { queryClient } from './api/ReactQueryClient';
-import { ReactQueryDevtools } from 'react-query/devtools';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './api/reactQueryClient';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Outlet, RouterProvider } from 'react-router-dom';
 import { router } from './router';
 
