@@ -42,6 +42,7 @@
       }
     ],
     "@typescript-eslint/promise-function-async": "off",
-    "eol-last": "off"
+    "eol-last": "off",
+    "no-trailing-spaces": "off"
   }
 }
