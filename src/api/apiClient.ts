@@ -4,7 +4,7 @@ import {
   type PokemonsList
 } from '../features/pokemon/types/Pokemon';
 
-const apiClient = axios.create({
+export const apiClient = axios.create({
   baseURL: 'https://pokeapi.co/api/v2',
   timeout: 5000,
   responseType: 'json'
