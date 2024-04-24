@@ -17,8 +17,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@ui/*": ["./src/components/*"],
-      "@demo/*": ["./src/features/demo/*"],
-      "@pokemon/*": ["./src/features/pokemon/*"]
+      "@demo": ["./src/features/demo/index.ts"],
+      "@pokemon": ["./src/features/pokemon/index.ts"]
     }
   },
   "include": ["src"],

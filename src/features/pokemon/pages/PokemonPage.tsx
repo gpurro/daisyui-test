@@ -1,5 +1,5 @@
-import { PokemonCard } from '@pokemon/components/PokemonCard';
-import { usePokemon } from '@pokemon/hooks/usePokemon';
+import { PokemonCard } from '../components/PokemonCard';
+import { usePokemon } from '../hooks/usePokemon';
 import { useParams } from 'react-router-dom';
 
 export const PokemonPage = () => {

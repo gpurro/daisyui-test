@@ -1,8 +1,8 @@
 import { PageLoading } from '@ui/utils/PageLoading';
 import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import HomePage from '@demo/pages/HomePage';
-import { PokemonPage, PokemonsPage } from '@pokemon/pages';
+import { HomePage } from '@demo';
+import { PokemonPage, PokemonsPage } from '@pokemon';
 
 /* Code split theme page */
 const ThemePage = lazy(
