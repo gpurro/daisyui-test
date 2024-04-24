@@ -1,4 +1,5 @@
 import { apiClient } from '../../../api/apiClient';
+import { queryClient } from '../../../api/reactQueryClient';
 import { type Pokemon, type NamedAPIResourceList } from '../types';
 import { useQuery } from '@tanstack/react-query';
 
@@ -17,7 +18,9 @@ const getPokemons = async (offset: number = 0, limit: number = 10) => {
   const responses = await Promise.all(promises);
 
   responses.forEach((response) => {
-    pokemons.push(response.data);
+    const pokemon: Pokemon = response.data;
+    queryClient.setQueryData(['pokemons', pokemon.name], pokemon);
+    pokemons.push(pokemon);
   });
 
   return pokemons;

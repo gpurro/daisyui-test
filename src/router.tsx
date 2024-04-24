@@ -1,9 +1,8 @@
 import { PageLoading } from '@ui/utils/PageLoading';
 import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import HomePage from './features/demo/pages/HomePage';
-import { PokemonPage } from './features/pokemon/pages/PokemonPage';
-import { PokemonsPage } from './features/pokemon/pages/PokemonsPage';
+import HomePage from '@demo/pages/HomePage';
+import { PokemonPage, PokemonsPage } from '@pokemon/pages';
 
 /* Code split theme page */
 const ThemePage = lazy(
@@ -18,15 +17,16 @@ export const router = createBrowserRouter(
       errorElement: <div>Error</div>
     },
     {
-      path: '/pokemon',
-      element: <PokemonsPage />
+      path: 'pokemon',
+      element: <PokemonsPage />,
+      children: []
     },
     {
-      path: '/pokemon/:name',
+      path: 'pokemon/:name',
       element: <PokemonPage />
     },
     {
-      path: '/theme',
+      path: 'theme',
       element: (
         <Suspense fallback={<PageLoading />}>
           <ThemePage />

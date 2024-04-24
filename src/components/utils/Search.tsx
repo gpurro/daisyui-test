@@ -1,16 +1,23 @@
 interface SearchProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  initialValue?: string;
 }
 
-export const Search = ({ onChange }: SearchProps) => {
+export const Search = ({ onChange, initialValue }: SearchProps) => {
   return (
     <>
-      <div className="input input-bordered flex items-center gap-2">
+      <form
+        className="input input-bordered flex items-center gap-2"
+        id="search-form"
+        role="search"
+      >
         <input
-          type="text"
+          type="search"
+          name="q"
           className="grow"
           placeholder="Search"
           onChange={onChange}
+          defaultValue={initialValue}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +31,7 @@ export const Search = ({ onChange }: SearchProps) => {
             clipRule="evenodd"
           />
         </svg>
-      </div>
+      </form>
     </>
   );
 };
