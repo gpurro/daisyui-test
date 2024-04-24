@@ -1,27 +1,10 @@
 import axios from 'axios';
-import {
-  type Pokemon,
-  type PokemonsList
-} from '../features/pokemon/types/Pokemon';
 
 export const apiClient = axios.create({
   baseURL: 'https://pokeapi.co/api/v2',
   timeout: 5000,
   responseType: 'json'
 });
-
-export const getPokemonsList = async (
-  offset: number = 0,
-  limit: number = 100
-) => {
-  return await apiClient.get<PokemonsList>(
-    `/pokemon?limit=${limit}&offset=${offset}`
-  );
-};
-
-export const getPokemon = async (name: string) => {
-  return await apiClient.get<Pokemon>(`/pokemon/${name}`);
-};
 
 export const getRandomNumberFromApi = async (): Promise<number> => {
   const res = await fetch(
