@@ -1,5 +1,5 @@
 import * as components from './components/index';
-import ComponentContainer from './ComponentContainer';
+import ComponentContainer from '../components/ComponentContainer';
 import type React from 'react';
 import { type ReactElement } from 'react';
 
