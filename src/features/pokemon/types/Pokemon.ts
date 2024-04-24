@@ -79,7 +79,7 @@ export interface Versions {
   'generation-iii': GenerationIii;
   'generation-iv': GenerationIv;
   'generation-v': GenerationV;
-  'generation-vi': { [key: string]: Home };
+  'generation-vi': Record<string, Home>;
   'generation-vii': GenerationVii;
   'generation-viii': GenerationViii;
 }
